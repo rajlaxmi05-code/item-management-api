@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/items")
+@CrossOrigin(origins = "*")  // <-- Enable CORS for all origins (for testing/demo)
 public class ItemController {
 
     private final List<Item> itemList = new ArrayList<>();
