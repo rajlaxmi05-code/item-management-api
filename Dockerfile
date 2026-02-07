@@ -5,15 +5,15 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy Maven wrapper & pom
-COPY mvnw .
-COPY .mvn .mvn
-COPY pom.xml .
+COPY item-management-api/mvnw .
+COPY item-management-api/.mvn .mvn
+COPY item-management-api/pom.xml .
 
 # Download dependencies
 RUN chmod +x mvnw && ./mvnw dependency:go-offline
 
 # Copy source code
-COPY src src
+COPY item-management-api/src src
 
 # Build the application
 RUN ./mvnw clean package -DskipTests
