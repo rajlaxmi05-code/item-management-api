@@ -1,0 +1,13 @@
+### Add Item
+POST http://localhost:8080/items
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "description": "Gaming Laptop"
+}
+
+###
+
+### Get Item by ID
+GET http://localhost:8080/items/1
