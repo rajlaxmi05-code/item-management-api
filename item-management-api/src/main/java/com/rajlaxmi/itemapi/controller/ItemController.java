@@ -16,12 +16,6 @@ public class ItemController {
     private final List<Item> itemList = new ArrayList<>();
     private int currentId = 1;
 
-    // Root endpoint - helpful for Render to avoid whitelabel error at '/'
-    @GetMapping("/")
-    public String home() {
-        return "Item Management API is running!";
-    }
-
     // Add a new item
     @PostMapping
     public ResponseEntity<?> addItem(@RequestBody Item item) {
